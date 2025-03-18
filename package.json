@@ -1,0 +1,40 @@
+{
+  "name": "rollup-typescript-template",
+  "version": "0.0.1",
+  "description": "rollup typescript template",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "rimraf dist ts-dist && rollup -c rollup.config.ts --configPlugin rollup-plugin-typescript2 && node ./dist/index.js",
+    "build": "rimraf dist ts-dist && rollup -c rollup.config.ts --configPlugin rollup-plugin-typescript2",
+    "test": "vitest",
+    "release": "semantic-release --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaohui5/rollup-typescript-template.git"
+  },
+  "keywords": [],
+  "author": "liiaohui5 <secretx500@gmail.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.6.3",
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^22.13.10",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.35.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "vitest": "^3.0.8",
+    "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
